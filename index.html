@@ -11,10 +11,40 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 	<script type="text/javascript" src="qrcode.js"></script>
-
+  <style>
+    body{
+      background: #2193b0;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #6dd5ed, #2193b0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  margin:30vw;
+       align-items:center;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      
+    }
+    #text{
+      height:40px;
+      width:300px;
+      border-radius:30px;
+      border:0px;
+      outline:none;
+      text-align:center;
+    }
+    .button{
+      border:0;
+      margin-top:20px;
+      border-radius:120px;
+      padding:10px;
+      color:white;
+      
+      background-color:#11998e
+    }
+    
+  </style>
 <body>
-	<input id="text"  type="text" value="Enter your text" style="width:80%" />
-	<input type="button"  value="Show QRCode" onclick=abc();>
+	<input id="text"  type="text" value="Enter your text"  />
+	<input type="button"  class="button" value="Show QRCode" onclick=abc();>
 	<br />
 	<div id="qrcode" style="width:100px; height:100px; margin-top:15px;"></div>
 
@@ -49,4 +79,3 @@ makeCode();
 
 </body>
 </html>
-
